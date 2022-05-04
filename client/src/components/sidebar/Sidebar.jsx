@@ -3,13 +3,13 @@ import "./sidebar.css";
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <div className="sidebarItem">
+            <div className="aboutMe">
                 <p className="sideBarTitle">ABOUT ME</p>
-                <img className="sideBarItemImg" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg" alt="" />
-                <p className="sideBarItemP">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolores, quis laudantium cumque odio natus non!</p>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg" alt="" />
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolores, quis laudantium cumque odio natus non!</p>
             </div>
             <div className="sideBarItem">
-                <p className="sideBarTitle">CATEGORIES</p>
+                <span className="sideBarTitle">CATEGORIES</span>
                 <ul className="sideBarList">
                     <li className="sideBarListItem">Life</li>
                     <li className="sideBarListItem">Music</li>
@@ -20,7 +20,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="sideBarItem">
-                <p className="sideBarTitle">FOLLOW US</p>
+                <span className="sideBarTitle">FOLLOW US</span>
                 <div className="sideBarSocial">
                     <i className="sideBarIcon fab fa-facebook-square"></i>
                     <i className="sideBarIcon fab fa-instagram-square"></i>
