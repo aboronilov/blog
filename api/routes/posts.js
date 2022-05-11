@@ -71,9 +71,20 @@ router.get("/:id", async (req, res) => {
 // Get all posts
 
 router.get("/", async (req, res) => {
+   const username = req.query.user;
+   const category = req.query.cat;
    try {
-      const post = await Post.findById(req.params.id)
-      res.status(200).json(post)
+      let posts;
+      if (username) {
+         posts = await Post.find({username: username})
+      } else if (category) {
+         posts = await Post.find({categories: {
+            $in: [category]
+         }})
+      } else {
+         posts = await Post.find()
+      }
+      res.status(200).json(posts)
    } catch (err) {
       res.status(404).json("No post found");
    }
